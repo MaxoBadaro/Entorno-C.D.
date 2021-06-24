@@ -29,4 +29,6 @@
       "token": "$github_token"
     }
   ]
+  notifications:
+  slack: entornoicreact:7Gpp89Wywt1UTiQ2d5sYoqxQ
 }
