@@ -1,34 +1,17 @@
-{
-  "language": "node_js",
-  "os": [
-    "linux"
-  ],
-  "dist": "xenial",
-  "node_js": [
-    "stable"
-  ],
-  "cache": {
-    "directories": [
-      "node_modules"
-    ]
-  },
-  "script": [
-    "npm run build"
-  ],
-  "deploy": [
-    {
-      "provider": "pages",
-      "strategy": "git",
-      "skip_cleanup": true,
-      "local_dir": "build",
-      "on": {
-        "branch": [
-          "master"
-        ]
-      },
-      "token": "$github_token"
-    }
-  ]
-  notifications:
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: build
+  github_token: $github_token
+  on:
+    branch: main
+notifications:
   slack: entornoicreact:7Gpp89Wywt1UTiQ2d5sYoqxQ
-}
