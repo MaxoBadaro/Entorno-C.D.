@@ -6,6 +6,8 @@ cache:
   - node_modules
 script:
   - npm run build
+  - npm test
+  - sonar-scanner 
 deploy:
   provider: pages
   skip_cleanup: true
@@ -15,3 +17,7 @@ deploy:
     branch: main
 notifications:
   slack: entornoicreact:7Gpp89Wywt1UTiQ2d5sYoqxQ
+addons:
+  sonarcloud: 
+    organization: 'maxibadaro'
+    token: c275e20ac3ac10885016e02cfa7808d637e4db40
