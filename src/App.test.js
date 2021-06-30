@@ -3,6 +3,6 @@ import App from './App';
 
 test('no está bien sacar esta palabra', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Esto es un texto de prueba/i);
+  const linkElement = screen.getByText(/Esto es un texto de pruebaa/i);
   expect(linkElement).toBeInTheDocument();
 });
