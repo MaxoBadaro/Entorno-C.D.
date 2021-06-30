@@ -14,7 +14,7 @@ deploy:
   local_dir: build
   github_token: $github_token
   on:
-    branch: main
+    branch: master
 notifications:
   slack: entornoicreact:7Gpp89Wywt1UTiQ2d5sYoqxQ
 addons:
